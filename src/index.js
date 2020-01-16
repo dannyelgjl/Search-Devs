@@ -1,18 +1,6 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const routes = require('./routes');
-
-const app = express();
-
-mongoose.connect('mongodb+srv://daniel:ad8e36@cluster0-838rc.mongodb.net/week10?retryWrites=true&w=majority', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-});
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
 
 
-app.use(express.json());
-app.use(routes);
-
-
-app.listen(3333);
+ReactDOM.render( < App / > , document.getElementById('root'));
